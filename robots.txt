@@ -1,4 +1,10 @@
+# Allow all search engines to crawl the site
 User-agent: *
 Disallow:
 
-Sitemap: https://yourdomain.com/sitemap.php
+# Disallow crawling of sensitive directories
+Disallow: /config/
+Disallow: /includes/
+
+# Point to the sitemap
+Sitemap: https://website.com/sitemap.xml
