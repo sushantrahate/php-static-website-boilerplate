@@ -1,0 +1,46 @@
+# Prevent directory browsing
+Options -Indexes
+
+# Redirect all non-HTTPS requests to HTTPS
+RewriteEngine On
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+####################### For Local ########################
+
+# Set the base directory
+RewriteBase /web/web-php/
+
+# Redirect .php files to clean URLs
+RewriteCond %{THE_REQUEST} \s/web/web-php/([^.]+)\.php [NC]
+RewriteRule ^(.*)\.php$ /web/web-php/$1 [L,R=301]
+
+# Rewrite clean URLs to .php files
+RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+####################### For Local ########################
+
+####################### For Prod ########################
+
+# Set the base directory for production (root of the site)
+# RewriteBase /
+
+# # Redirect .php files to clean URLs
+# RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+# RewriteRule ^(.*)\.php$ /$1 [L,R=301]
+
+# # Rewrite clean URLs to .php files
+# RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+
+####################### For Prod ########################
+
+# Restrict access to the config folder
+<Files ~ "^config.php$">
+    Order Deny,Allow
+    Deny from all
+</Files>
+
+<Files .htaccess>
+    Order Deny,Allow
+    Deny from all
+</Files>
