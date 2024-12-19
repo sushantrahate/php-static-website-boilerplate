@@ -13,25 +13,27 @@ A lightweight, static website built with PHP, HTML, CSS, and JavaScript.
 ## Folder Structure
 
 ```
-├── config/                # Configuration files
-│   └── config.php         # Global constants
-├── includes/              # Reusable PHP components
-│   ├── header.php         # Common header for all pages
-│   ├── footer.php         # Common footer for all pages
-│   └── navigation.php     # Common navigation menu
-├── about.php              # About page
-├── contact.php            # Contact page
-├── index.php              # Homepage
-├── assets/                # Static assets
-│   ├── css/               # Stylesheets
-│   │   └── style.css      # Main stylesheet
-│   ├── js/                # JavaScript files
-│   │   └── scripts.js     # Main JavaScript file
-│   └── images/            # Image files
-├── .htaccess              # Rewrite rules and security settings
-├── sitemap.xml            # XML sitemap for SEO
-├── robots.txt             # Instructions for search engine crawlers
-└── README.md              # Project documentation
+├── config/                     # Configuration files
+│   └── config.php              # Global constants
+├── includes/                   # Reusable PHP components
+│   ├── header.php              # Common header for all pages
+│   ├── footer.php              # Common footer for all pages
+│   └── navigation.php          # Common navigation menu
+├── about.php                   # About page
+├── contact.php                 # Contact page
+├── index.php                   # Homepage
+├── services/                   # Services Directory
+│   ├── service-details.php/    # Service Details page
+├── assets/                     # Static assets
+│   ├── css/                    # Stylesheets
+│   │   └── style.css           # Main stylesheet
+│   ├── js/                     # JavaScript files
+│   │   └── scripts.js          # Main JavaScript file
+│   └── images/                 # Image files
+├── .htaccess                   # Rewrite rules and security settings
+├── sitemap.xml                 # XML sitemap for SEO
+├── robots.txt                  # Instructions for search engine crawlers
+└── README.md                   # Project documentation
 ```
 
 ## .htaccess
