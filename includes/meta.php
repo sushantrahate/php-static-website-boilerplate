@@ -4,4 +4,4 @@
 <meta name="keywords" content="keyword1, keyword2, keyword3">
 <meta name="author" content="Your Name">
 <meta name="robots" content="index, follow">
-<link rel="icon" href="assets/images/favicon.ico">
+<link rel="icon" href="data:," />

@@ -1,6 +1,6 @@
 <?php
 // Global Constants
-define('BASE_URL', 'https://yourdomain.com');
+define('BASE_URL', 'https://localhost/web/php-static-website-boilerplate');
 define('SITE_NAME', 'MyWebsite');
 define('ADMIN_EMAIL', 'admin@yourdomain.com');
 

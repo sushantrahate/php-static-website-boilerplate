@@ -3,11 +3,6 @@
 </footer>
 
 <!-- Main Scripts -->
-<script src="assets/js/scripts.js" defer></script>
-
-<!-- Additional Scripts -->
-<script src="assets/js/additional-script1.js" defer></script>
-<script src="assets/js/additional-script2.js" defer></script>
-
+<script src="<?php echo $baseUrl; ?>/assets/js/scripts.js" defer></script>
 </body>
 </html>

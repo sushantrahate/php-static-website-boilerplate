@@ -11,17 +11,21 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
 <head>
     <?php include 'meta.php'; ?>
     <title><?php echo $pageTitle; ?> | MyWebsite</title>
-    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="<?php echo $baseUrl; ?>/assets/css/styles.css">
     <link rel="canonical" href="<?php echo "$baseUrl/$canonical"; ?>">
-    <script src="assets/js/scripts.js" defer></script>
 </head>
 <body>
 <header>
     <nav>
         <ul>
-            <li><a href="index">Home</a></li>
-            <li><a href="about">About</a></li>
-            <li><a href="contact">Contact</a></li>
+            <li><a href="<?php echo $baseUrl; ?>/index">Home</a></li>
+            <li><a href="<?php echo $baseUrl; ?>/about">About</a></li>
+            <li><a href="<?php echo $baseUrl; ?>/services/">Services</a>
+            <ul>
+                <li><a href="<?php echo $baseUrl; ?>/services/service-details">Service detail</a></li>
+            </ul>
+        </li>
+            <li><a href="<?php echo $baseUrl; ?>/contact">Contact</a></li>
         </ul>
     </nav>
 </header>

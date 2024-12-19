@@ -9,14 +9,16 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 ####################### For Local ########################
 
 # Set the base directory
-RewriteBase /web/web-php/
+RewriteBase /web/php-static-website-boilerplate/
 
 # Redirect .php files to clean URLs
-RewriteCond %{THE_REQUEST} \s/web/web-php/([^.]+)\.php [NC]
-RewriteRule ^(.*)\.php$ /web/web-php/$1 [L,R=301]
+RewriteCond %{THE_REQUEST} \s/web/php-static-website-boilerplate/(.+)\.php [NC]
+RewriteRule ^(.+)\.php$ /web/php-static-website-boilerplate/$1 [L,R=301]
 
 # Rewrite clean URLs to .php files
-RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ $1.php [L]
 
 ####################### For Local ########################
 
