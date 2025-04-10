@@ -32,7 +32,9 @@ RewriteRule ^(.+)$ $1.php [L]
 # RewriteRule ^(.*)\.php$ /$1 [L,R=301]
 
 # # Rewrite clean URLs to .php files
-# RewriteRule ^([a-zA-Z0-9_-]+)$ $1.php [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+# RewriteRule ^(.+)$ $1.php [L]
 
 ####################### For Prod ########################
 
