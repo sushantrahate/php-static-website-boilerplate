@@ -1,6 +1,7 @@
 <?php 
 // Ensure HTTPS
 $baseUrl = BASE_URL;
+$siteName = SITE_NAME;
 if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
     header("Location: https://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
     exit();
@@ -10,7 +11,7 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
 <html lang="en">
 <head>
     <?php include 'meta.php'; ?>
-    <title><?php echo $pageTitle; ?> | MyWebsite</title>
+    <title><?= "$pageTitle | $siteName" ?></title>
     <link rel="stylesheet" href="<?php echo $baseUrl; ?>/assets/css/styles.css">
     <link rel="canonical" href="<?php echo "$baseUrl/$canonical"; ?>">
 </head>
