@@ -2,6 +2,8 @@
 require_once './config/config.php';
 $pageTitle = "About Us";
 $canonical = 'about';
+$description = '';
+$keywords = '';
 include 'includes/header.php'; 
 ?>
 <main>

@@ -2,6 +2,8 @@
 require_once './config/config.php';
 $pageTitle = "Contact Us";
 $canonical = 'contact';
+$description = '';
+$keywords = '';
 include 'includes/header.php'; 
 ?>
 <main>

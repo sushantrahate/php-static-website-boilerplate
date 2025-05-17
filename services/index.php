@@ -2,6 +2,8 @@
 require_once '../config/config.php';
 $pageTitle = "All Services"; // Page-specific title
 $canonical = '';
+$description = '';
+$keywords = '';
 include '../includes/header.php'; 
 ?>
 <main>

@@ -14,6 +14,8 @@ if (empty($_SERVER['HTTPS']) || $_SERVER['HTTPS'] !== 'on') {
     <title><?= "$pageTitle | $siteName" ?></title>
     <link rel="stylesheet" href="<?php echo $baseUrl; ?>/assets/css/styles.css">
     <link rel="canonical" href="<?php echo "$baseUrl/$canonical"; ?>">
+    <meta name="description" content="<?php echo "$description"; ?>">
+    <meta name="keywords" content="<?php echo "$keywords"; ?>">
 </head>
 <body>
 <header>
